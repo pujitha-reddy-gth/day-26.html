@@ -1,27 +1,15 @@
-package com.Main2;
+package com.main3;
+import com.publisher.Publisher;
+import com.book.Book;
 
-
-import com.manufacturer.Manufacture;
-import com.product.Product;
 
 public class Main {
-
-	
-	public static void main(String[] args) {
-	System.out.println("Manufacture:");
-	Manufacture manufacturer=Manufacture.getManufacturerObject("BMW X5", "CANADA", "235665262");
-	Product product=Product.getProductObject("Bus", "Yatra", manufacturer,58963);
-	if(manufacturer==null || product==null) {
-	System.out.println("Invalid product/manufacturer information.");
+    public static void main(String[] args) {
+	Publisher publisher=Publisher.getPublisherObject("Devi", "india", "pik2514");
+	Book book=Book.getBookObject("xyz", "murthi", publisher, 5089);
+	System.out.println(publisher);
+	System.out.println();
+	System.out.println("---Book Details---");
+	System.out.println(book);
 	}
-	else {
-	System.out.println("---Product Details---");
-	System.out.println(product);
 	}
-	System.out.println("---ManufactureDratils---");
-	System.out.println(manufacturer);
-	}
-	
-	}
-
-
